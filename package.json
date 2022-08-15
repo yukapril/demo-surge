@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build && cp CNAME ./dist && cp ./dist/index.html ./dist/200.html",
+    "publish": "surge ./dist"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "surge": "^0.23.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
